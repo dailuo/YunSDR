@@ -85,19 +85,20 @@ end
 % subplot(211),stem(a1(1:end));
 % min = min(a1);
 % a1 = a1 + abs(min);
-figure(2);clf;
-subplot(411),plot(a1(1:end));
-% plot(a1(1:end));
-
-
-
-a1_fft = fft(a1);
-subplot(412),plot(abs(a1_fft(1:end)));
-a1_fft(550:16384-550+1) = 0;
-subplot(413),plot(abs(a1_fft(1:end)));
-new_a1 = ifft(a1_fft);
-subplot(414),plot(real(new_a1(1:end)));
-
+% figure(2);clf;
+% subplot(411),plot(a1(1:end));
+% % plot(a1(1:end));
+% 
+% 
+% 
+% a1_fft = fft(a1);
+% subplot(412),plot(abs(a1_fft(1:end)));
+% a1_fft(550:16384-550+1) = 0;
+% subplot(413),plot(abs(a1_fft(1:end)));
+% new_a1 = ifft(a1_fft);
+% subplot(414),plot(real(new_a1(1:end)));
+receive_sig = a1 * a2;
+plot(receive_sig);
 
 
 

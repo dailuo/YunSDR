@@ -47,7 +47,6 @@ carrier = carrier_I+1i*carrier_Q;
 
 mod_data = carrier.*data_trans;
 plot(real(mod_data));
-tx_data = mod_data;
 
 
 
