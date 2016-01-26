@@ -35,9 +35,10 @@ carrier_I = round(cos(2*pi/20*[0:19]).*30000);
 carrier_Q = round(sin(2*pi/20*[0:19]).*30000);
 %---------------------------------------------
 %----²úÉúĞÅºÅ---------------------------------
-bit_Num = 500;
+bit_Num = 50;
 bit_Width = 20;
 bit_trans = randint(1, bit_Num);
+% bit_trans = ones(1,50);
 tmp1 = repmat(bit_trans',1,bit_Width);
 data_trans = reshape(tmp1',1,length(tmp1).*bit_Width);
 
@@ -46,8 +47,10 @@ carrier_Q = repmat(carrier_Q,1,bit_Num);
 carrier = carrier_I+1i*carrier_Q;
 
 mod_data = carrier.*data_trans;
-plot(real(mod_data));
-tx_data = mod_data;
+subplot(311),plot(real(mod_data));
+subplot(312),plot(imag(mod_data));
+subplot(313),plot(abs(real(mod_data) .* imag(mod_data)));
+txdata = mod_data;
 
 
 

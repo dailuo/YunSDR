@@ -13,8 +13,8 @@ fopen(data_link);
 
 buff_size=128*1024;
 bw_hex=dec2hex(20e6,8);
-samp_hex=dec2hex(40e6,8);
-freq_hex=dec2hex(2140e6,10);%%for ad9361
+samp_hex=dec2hex(20e6,8);
+freq_hex=dec2hex(999e6,10);%%for ad9361
 rxgain1=5;
 rxgain2=5;
 rx_chan=3;%1=rx1;2=rx2;3=rx1&rx2
@@ -97,9 +97,10 @@ end
 % subplot(413),plot(abs(a1_fft(1:end)));
 % new_a1 = ifft(a1_fft);
 % subplot(414),plot(real(new_a1(1:end)));
-receive_sig = a1 * a2;
-plot(receive_sig);
-
+receive_sig = a1 .* a2;
+subplot(311),plot(a1);
+subplot(312),plot(a2);
+subplot(313),plot(abs(receive_sig));
 
 
 
