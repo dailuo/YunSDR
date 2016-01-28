@@ -86,8 +86,8 @@ end
 % min = min(a1);
 % a1 = a1 + abs(min);
 figure(2);clf;
-stem(a1(1:end));
-% plot(a1(1:end));
+% stem(a1(1:end));
+plot(a1(1:end));
 % 
 % 
 % 

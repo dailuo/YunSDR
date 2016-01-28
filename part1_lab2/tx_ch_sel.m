@@ -36,9 +36,9 @@ tx_chan=3;%1=tx1;2=tx2;3=tx1&tx2
 
 %%new tone signal(a step function for test)
 
-bitseq = '11111111110000000000';
+bitseq = '01';
 % bitseq = '0000000000';
-SPB = 2;
+SPB = 1024;
 E = 32767*100;
 wave = bitseq2waveform(bitseq, SPB, E);
 
@@ -47,8 +47,8 @@ b=wave;
 
 figure(1); clf; stem(a);
 c=a+1i*b;
-txdata = repmat(c,1,32);
-
+% txdata = repmat(c,1,32);
+txdata = c;
 
 
 
