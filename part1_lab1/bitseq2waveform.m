@@ -7,5 +7,5 @@ for i = 1:length(bitseq)
         wave = [wave str2double(bitseq(i))*E];
     end
 end
-wave = [E,E,E,E,E,0,0,0,0,0,E,E,E,E,E,wave,E,E,E,E,E,0,0,0,0,0,E,E,E,E,E];
+% wave = [E,E,E,E,E,0,0,0,0,0,E,E,E,E,E,wave,E,E,E,E,E,0,0,0,0,0,E,E,E,E,E];
 end
